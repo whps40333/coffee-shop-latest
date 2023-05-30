@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <p>this is react App</p>
         <Router />
       </BrowserRouter>
     </div>
