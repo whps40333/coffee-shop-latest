@@ -1,8 +1,11 @@
-import classes from "../../../styles/TextButton.module.css";
+import styles from "../../../../public/styles/UI/TextButton.module.scss";
 
 const TextButton = (props) => {
   return (
-    <button className={classes.button} onClick={props.onClick}>
+    <button
+      className={`${props.className}${styles.button}`}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   );
