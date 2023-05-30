@@ -2,10 +2,10 @@ import React, { useReducer, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import BlackCard from "../components/UI/Modals/BlcakCard";
 import WhiteButton from "../components/UI/Buttons/WhiteButton";
-import Input from "../components/UI/Inputs/input";
-import styles from "../../public/styles/pages/Login.module.scss";
-import coffeeLogo from "../../public/images/coffee logo.png";
-import coffeeShop from "../../public/vedio/AnyConv.com__Coffee-Shop 2-1.mp4";
+import Input from "../components/UI/Inputs/Input";
+import styles from "../styles/pages/Login.module.scss";
+import coffeeLogo from "../images/coffee logo.png";
+import coffeeShop from "../vedio/AnyConv.com__Coffee-Shop 2-1.mp4";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const emailReducer = (state, action) => {
@@ -66,8 +66,8 @@ function RegisterPage() {
       const auth = getAuth();
       const userCredential = await createUserWithEmailAndPassword(
         auth,
-        emailState,
-        passwordState
+        emailState.value,
+        passwordState.value
       );
       navigate("/main");
       const user = userCredential.user;
@@ -77,7 +77,7 @@ function RegisterPage() {
       const errorMessage = error.message;
       console.log(errorCode, errorMessage);
     }
-    console.log(emailState, passwordState);
+    console.log(emailState.value, passwordState.value);
   };
   return (
     <>
@@ -97,7 +97,7 @@ function RegisterPage() {
               value={emailState.value}
               onChange={emailChangeHandler}
               onBlur={validateEmailHandler}
-              placeholder="email"
+              placeholder="帳號(含有@的電子信箱)"
             />
             {emailIsValid === false && <p>電子郵件格式不正確</p>}
             <Input
@@ -109,7 +109,7 @@ function RegisterPage() {
               value={passwordState.value}
               onChange={passwordChangeHandler}
               onBlur={validatePasswordHandler}
-              placeholder="密碼"
+              placeholder="密碼(由英數組成至少7個字)"
             />
             {passwordIsValid === false && <p>密碼長度要超過6個字</p>}
             <div className={styles.actions}>

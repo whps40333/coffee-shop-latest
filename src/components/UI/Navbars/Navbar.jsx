@@ -1,5 +1,5 @@
 import TextButton from "../Buttons/TextButton";
-import styles from "../../../../public/styles/UI/Navbars/Navbar.module.scss";
+import styles from "../../../styles/UI/Navbars/Navbar.module.scss";
 
 const NavBar = (props) => {
   const handleButtonClick = (sectionName) => {

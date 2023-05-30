@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "../../../../public/styles/UI/SearchBar/SearchBar.module.scss";
+import styles from "../../../styles/UI/SearchBar/SearchBar.module.scss";
 
 function SearchBar(props) {
   const [query, setQuery] = useState("");

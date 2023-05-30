@@ -1,4 +1,4 @@
-import styles from "../../../../public/styles/UI/Modals/Blackcard.module.scss";
+import styles from "../../../styles/UI/Modals/Blackcard.module.scss";
 
 const BlackCard = (props) => {
   return (

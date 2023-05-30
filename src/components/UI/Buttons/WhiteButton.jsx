@@ -1,4 +1,4 @@
-import styles from "../../../../public/styles/UI/Buttons/WhiteButton.module.scss";
+import styles from "../../../styles/UI/Buttons/WhiteButton.module.scss";
 
 const WhiteButton = (props) => {
   return (

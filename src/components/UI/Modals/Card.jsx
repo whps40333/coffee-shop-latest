@@ -1,4 +1,4 @@
-import styles from "../../../../public/styles/UI/Modals/Card.module.scss";
+import styles from "../../../styles/UI/Modals/Card.module.scss";
 
 const Card = (props) => {
   return (
