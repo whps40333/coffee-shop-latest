@@ -1,5 +1,4 @@
-import styles from "../../../../public/styles/UI/ClrButton.module.scss";
-
+import styles from "../../../../public/styles/UI/Buttons/ClrButton.module.scss";
 const Clrbutton = (props) => {
   return (
     <button

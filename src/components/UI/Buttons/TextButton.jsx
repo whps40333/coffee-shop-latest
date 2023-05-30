@@ -1,4 +1,4 @@
-import styles from "../../../../public/styles/UI/TextButton.module.scss";
+import styles from "../../../../public/styles/UI/Buttons/TextButton.module.scss";
 
 const TextButton = (props) => {
   return (

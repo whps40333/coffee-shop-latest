@@ -1,9 +1,9 @@
-import classes from "../../../styles/UI/WhiteButton.module.css";
+import styles from "../../../../public/styles/UI/Buttons/WhiteButton.module.scss";
 
 const WhiteButton = (props) => {
   return (
     <button
-      className={classes.button}
+      className={`${props.className}${styles.button}`}
       type={props.type || "button"}
       onClick={props.onClick}
     >
