@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import classes from "../../../styles/UI/Searchbar.module.css";
+import styles from "../../../../public/styles/UI/SearchBar/SearchBar.module.scss";
 
 function SearchBar(props) {
   const [query, setQuery] = useState("");
@@ -14,7 +14,7 @@ function SearchBar(props) {
   );
 
   return (
-    <div className={classes.search}>
+    <div className={styles.search}>
       <input
         type="text"
         placeholder="Search..."

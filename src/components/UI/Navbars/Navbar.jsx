@@ -1,5 +1,5 @@
 import TextButton from "../Buttons/TextButton";
-import classes from "../../../styles/UI/Navbar.module.css";
+import styles from "../../../../public/styles/UI/Navbars/Navbar.module.scss";
 
 const NavBar = (props) => {
   const handleButtonClick = (sectionName) => {
@@ -7,21 +7,21 @@ const NavBar = (props) => {
   };
 
   return (
-    <div className={classes.wrapper}>
+    <div className={styles.wrapper}>
       <TextButton
-        className={classes.button}
+        className={styles.button}
         onClick={() => handleButtonClick("writing")}
       >
         撰寫評論
       </TextButton>
       <TextButton
-        className={classes.button}
+        className={styles.button}
         onClick={() => handleButtonClick("comment")}
       >
         查看評論
       </TextButton>
       <TextButton
-        className={classes.button}
+        className={styles.button}
         onClick={() => handleButtonClick("favorite")}
       >
         查看收藏
