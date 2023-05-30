@@ -8,11 +8,11 @@ import UserLayout from "../Pages/UserLayout";
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/main" element={<MainPage />} />
-      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/coffee-shop-latest/" element={<LoginPage />} />
+      <Route path="/coffee-shop-latest/main" element={<MainPage />} />
+      <Route path="/coffee-shop-latest/register" element={<RegisterPage />} />
       <Route
-        path="/user/*"
+        path="/coffee-shop-latest/user/*"
         element={
           <Routes>
             <Route path="/" element={<UserLayout />} />
