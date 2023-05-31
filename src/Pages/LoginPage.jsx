@@ -1,16 +1,9 @@
-import React, {
-  useState,
-  useEffect,
-  useReducer,
-  useRef,
-  useContext,
-} from "react";
+import React, { useState, useEffect, useReducer, useRef } from "react";
 import BlackCard from "../components/UI/Modals/BlcakCard";
 import WhiteButton from "../components/UI/Buttons/WhiteButton";
 import Input from "../components/UI/Inputs/Input";
 import styles from "../styles/pages/Login.module.scss";
 import coffeeLogo from "../images/coffee logo.png";
-import AuthContext from "../store/auth-context";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
@@ -42,7 +35,6 @@ function LoginPage(props) {
     value: "",
     isValid: null,
   });
-  const authCtx = useContext(AuthContext);
 
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -91,7 +83,6 @@ function LoginPage(props) {
 
     if (formIsValid) {
       console.log(emailState.value, passwordState.value);
-      authCtx.onLogin(emailState.value, passwordState.value);
     } else if (!emailIsValid) {
       emailInputRef.current.focus();
     } else {
