@@ -120,9 +120,6 @@ function RegisterPage() {
           </form>
         </BlackCard>
       </div>
-      <video className={styles.vedio} autoPlay loop muted>
-        <source src={coffeeShop} type="video/mp4" />
-      </video>
     </>
   );
 }
