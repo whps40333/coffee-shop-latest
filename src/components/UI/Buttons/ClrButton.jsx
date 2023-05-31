@@ -2,7 +2,7 @@ import styles from "../../../styles/UI/Buttons/ClrButton.module.scss";
 const Clrbutton = (props) => {
   return (
     <button
-      className={` ${props.className} ${styles.button}`}
+      className={styles.button}
       type={props.type || "button"}
       onClick={props.onClick}
     >

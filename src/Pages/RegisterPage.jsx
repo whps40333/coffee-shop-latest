@@ -4,7 +4,7 @@ import BlackCard from "../components/UI/Modals/BlcakCard";
 import WhiteButton from "../components/UI/Buttons/WhiteButton";
 import Input from "../components/UI/Inputs/Input";
 import styles from "../styles/pages/Login.module.scss";
-import coffeeLogo from "../images/coffee logo.png";
+import coffeeLogo from "../images/coffeeLogo.png";
 import CoffeeShop from "../vedio/CoffeeShop.mp4";
 
 const emailReducer = (state, action) => {

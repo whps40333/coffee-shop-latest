@@ -3,7 +3,7 @@ import styles from "../../../styles/UI/Buttons/WhiteButton.module.scss";
 const WhiteButton = (props) => {
   return (
     <button
-      className={`${props.className}${styles.button}`}
+      className={styles.button}
       type={props.type || "button"}
       onClick={props.onClick}
     >

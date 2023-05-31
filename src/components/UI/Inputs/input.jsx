@@ -1,6 +1,6 @@
 import React, { useRef, useImperativeHandle } from "react";
 
-import classes from "../../../styles/UI/Inputs/Input.module.scss";
+import styles from "../../../styles/UI/Inputs/Input.module.scss";
 
 const Input = React.forwardRef((props, ref) => {
   const inputRef = useRef();
@@ -17,8 +17,8 @@ const Input = React.forwardRef((props, ref) => {
 
   return (
     <div
-      className={`${classes.control} ${
-        props.isValid === false ? classes.invalid : ""
+      className={`${styles.control} ${
+        props.isValid === false ? styles.invalid : ""
       }`}
     >
       <input
