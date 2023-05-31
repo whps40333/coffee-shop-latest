@@ -1,9 +1,17 @@
-import React, { useState, useEffect, useReducer, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useReducer,
+  useRef,
+  useContext,
+} from "react";
 import BlackCard from "../components/UI/Modals/BlcakCard";
 import WhiteButton from "../components/UI/Buttons/WhiteButton";
 import Input from "../components/UI/Inputs/Input";
 import styles from "../styles/pages/Login.module.scss";
-import coffeeLogo from "../images/coffee logo.png";
+import coffeeLogo from "../images/coffeeLogo.png";
+import AuthContext from "../store/auth-context";
+import CoffeeShop from "../vedio/CoffeeShop.mp4";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
@@ -35,6 +43,8 @@ function LoginPage(props) {
     value: "",
     isValid: null,
   });
+
+  const authCtx = useContext(AuthContext);
 
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -83,6 +93,7 @@ function LoginPage(props) {
 
     if (formIsValid) {
       console.log(emailState.value, passwordState.value);
+      authCtx.onLogin(emailState.value, passwordState.value);
     } else if (!emailIsValid) {
       emailInputRef.current.focus();
     } else {
@@ -131,6 +142,9 @@ function LoginPage(props) {
             <a href="register">前往註冊</a>
           </form>
         </BlackCard>
+        <video className={styles.vedio} autoPlay loop muted>
+          <source src={CoffeeShop} type="video/mp4" />
+        </video>
       </div>
     </>
   );

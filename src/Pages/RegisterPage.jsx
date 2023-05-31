@@ -5,6 +5,7 @@ import WhiteButton from "../components/UI/Buttons/WhiteButton";
 import Input from "../components/UI/Inputs/Input";
 import styles from "../styles/pages/Login.module.scss";
 import coffeeLogo from "../images/coffee logo.png";
+import CoffeeShop from "../vedio/CoffeeShop.mp4";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
@@ -109,6 +110,9 @@ function RegisterPage() {
             </div>
           </form>
         </BlackCard>
+        <video className={styles.vedio} autoPlay loop muted>
+          <source src={CoffeeShop} type="video/mp4" />
+        </video>
       </div>
     </>
   );
