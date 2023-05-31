@@ -10,7 +10,6 @@ import WhiteButton from "../components/UI/Buttons/WhiteButton";
 import Input from "../components/UI/Inputs/Input";
 import styles from "../styles/pages/Login.module.scss";
 import coffeeLogo from "../images/coffee logo.png";
-import coffeeShop from "../vedio/AnyConv.com__Coffee-Shop 2-1.mp4";
 import AuthContext from "../store/auth-context";
 
 const emailReducer = (state, action) => {
