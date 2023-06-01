@@ -1,7 +1,7 @@
-import classes from "../../styles/pages/UserPages/Favorites/FavoriteSection.module.css";
+import styles from "../../../styles/pages/UserPage/Favorites/FavoriteSection.module.scss";
 import { useCallback, useState, useEffect } from "react";
 
-import FavoriteList from "./Favorites/FavoriteList";
+import FavoriteList from "./FavoriteList";
 
 function FavoriteSection(props) {
   const [favoriteItem, setFavoriteItems] = useState([]);
@@ -70,7 +70,7 @@ function FavoriteSection(props) {
 
   return (
     <>
-      <section className={classes.wrapper}>{content}</section>
+      <section className={styles.wrapper}>{content}</section>
     </>
   );
 }

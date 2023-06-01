@@ -11,7 +11,7 @@ function CommentSection() {
     setError(null);
     try {
       const response = await fetch(
-        "https://coffee-writing-default-rtdb.firebaseio.com/restaurants.json"
+        "https://coffee-shop-30b10-default-rtdb.firebaseio.com/comments.json"
       );
       if (!response.ok) {
         throw new Error("Something went wrong!");

@@ -1,9 +1,9 @@
-import classes from "../../../styles/ClrButton.module.css";
+import styles from "../../../styles/UI/Buttons/ClrButton.module.scss";
 
 const Clrbutton = (props) => {
   return (
     <button
-      className={classes.button}
+      className={styles.button}
       type={props.type || "button"}
       onClick={props.onClick}
     >

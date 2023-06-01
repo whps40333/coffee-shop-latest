@@ -1,4 +1,4 @@
-import classes from "../../../styles/pages/UserPages/Favorites/FavoriteItem.module.css";
+import styles from "../../../styles/pages/UserPage/Favorites/FavoriteItem.module.scss";
 
 const FavoriteItem = (props) => {
   const removeFavoriteHandler = () => {
@@ -6,7 +6,7 @@ const FavoriteItem = (props) => {
     console.log(favoriteItemId);
 
     fetch(
-      `https://coffee-writing-default-rtdb.firebaseio.com/favoriteItem/${favoriteItemId}.json`,
+      `https://coffee-shop-30b10-default-rtdb.firebaseio.com/favoriteItem/${favoriteItemId}.json`,
       {
         method: "delete",
       }
@@ -19,12 +19,12 @@ const FavoriteItem = (props) => {
   };
 
   return (
-    <div className={classes.favoriteItem}>
+    <div className={styles.favoriteItem}>
       <h3>{props.name}</h3>
-      <div className={classes.description}>{props.time}</div>
-      <div className={classes.price}>{props.price}</div>
-      <div className={classes.score}>{props.score}</div>
-      <button className={classes.button} onClick={removeFavoriteHandler}>
+      <div className={styles.description}>{props.time}</div>
+      <div className={styles.price}>{props.price}</div>
+      <div className={styles.score}>{props.score}</div>
+      <button className={styles.button} onClick={removeFavoriteHandler}>
         移除
       </button>
     </div>

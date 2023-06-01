@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import classes from "../../styles/pages/UserPages/WritingSection.module.css";
-import Clrbutton from "../../components/UI/Buttons/ClrButton";
+import styles from "../../../styles/pages/UserPage/Writing/WritingSection.module.scss";
+import Clrbutton from "../../../components/UI/Buttons/ClrButton";
 
 function WritingSection(props) {
   const titleRef = useRef("");
@@ -26,7 +26,7 @@ function WritingSection(props) {
     };
 
     fetch(
-      "https://coffee-writing-default-rtdb.firebaseio.com/restaurants.json",
+      "https://coffee-shop-30b10-default-rtdb.firebaseio.com/comments.json",
       {
         method: "POST",
         body: JSON.stringify(restaurant),
@@ -44,12 +44,12 @@ function WritingSection(props) {
   }
 
   return (
-    <form onSubmit={submitHandler} className={classes.wrapper}>
-      <div className={classes.control}>
+    <form onSubmit={submitHandler} className={styles.wrapper}>
+      <div className={styles.control}>
         <label htmlFor="title"></label>
         <input type="text" id="title" ref={titleRef} placeholder="餐廳名稱" />
       </div>
-      <div className={classes.control}>
+      <div className={styles.control}>
         <label htmlFor="Date"></label>
         <input
           type="date"
@@ -60,7 +60,7 @@ function WritingSection(props) {
           placeholder="2022-02-27"
         />
       </div>
-      <div className={classes.control}>
+      <div className={styles.control}>
         <label htmlFor="comment"></label>
         <textarea
           type="text"
@@ -69,7 +69,7 @@ function WritingSection(props) {
           placeholder="用餐回饋"
         ></textarea>
       </div>
-      <Clrbutton className={classes.clrbutton} type="submit">
+      <Clrbutton className={styles.clrbutton} type="submit">
         提交
       </Clrbutton>
     </form>
