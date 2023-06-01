@@ -6,6 +6,7 @@ import Input from "../components/UI/Inputs/Input";
 import styles from "../styles/pages/Login.module.scss";
 import coffeeLogo from "../images/coffeeLogo.png";
 import CoffeeShop from "../vedio/CoffeeShop.mp4";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
@@ -62,7 +63,15 @@ function RegisterPage() {
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
+      const auth = getAuth();
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        emailState.value,
+        passwordState.value
+      );
       navigate("/main");
+      const user = userCredential.user;
+      console.log(user);
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
