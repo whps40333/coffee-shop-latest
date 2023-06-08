@@ -1,5 +1,5 @@
 import { InfoWindow } from "@react-google-maps/api";
-import styles from "../../../styles/pages/MainPage/shop/storeItem.module.scss";
+import styles from "../../../styles/pages/MainPage/CoffeeMap/Infowindows.module.scss";
 import Clrbutton from "../../../components/UI/Buttons/ClrButton";
 import { useEffect, useState } from "react";
 
