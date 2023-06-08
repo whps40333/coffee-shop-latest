@@ -16,7 +16,7 @@ function Router() {
         element={!authCtx.isLoggedIn && <LoginPage onLogin={authCtx.onLogin} />}
       />
       <Route
-        path="/main"
+        path="/coffee-shop-latest/main"
         element={
           authCtx.isLoggedIn && (
             <MainPage
@@ -27,11 +27,11 @@ function Router() {
         }
       />
       <Route
-        path="/register"
+        path="/coffee-shop-latest/register"
         element={!authCtx.isLoggedIn && <RegisterPage />}
       />
       <Route
-        path="/user/*"
+        path="/coffee-shop-latest/user/*"
         element={
           authCtx.isLoggedIn && (
             <Routes>
