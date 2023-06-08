@@ -58,7 +58,7 @@ export const AuthContextProvider = (props) => {
       signOut(auth);
       localStorage.removeItem("token");
       setIsLoggedIn(false);
-      navigate("/");
+      navigate("/coffee-shop-latest/");
     } catch (error) {
       console.log(error);
     }

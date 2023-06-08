@@ -1,5 +1,5 @@
 import React from "react";
-import ShopSection from "./Shops/ShopSection";
+import CoffeeMap from "./CoffeeMap/CoffeeMap";
 import MainHeader from "../../components/Header/MainHeader";
 
 function MainPage(props) {
@@ -9,9 +9,7 @@ function MainPage(props) {
         isLoggedIn={props.isAuthenticated}
         onLogout={props.onLogout}
       />
-      <div>
-        <ShopSection />
-      </div>
+      <CoffeeMap />
     </>
   );
 }
