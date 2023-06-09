@@ -7,6 +7,7 @@ function CoffeeMap() {
   const [stores, setStores] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState();
+  const [selectedMarker, setSelectedMarker] = useState(null);
   const apiKey = "AIzaSyBxol_vebXa90e1VtfWoGXjASEg3Hjn1lA";
   const mapStyles = {
     height: "100%",
@@ -50,6 +51,10 @@ function CoffeeMap() {
     fetchStores();
   }, []);
 
+  const markerHandler = (marker) => {
+    setSelectedMarker(marker);
+  };
+
   if (isLoading) {
     return (
       <section className={styles.StoresLoading}>
@@ -81,8 +86,11 @@ function CoffeeMap() {
                 lat: store.lat,
                 lng: store.lng,
               }}
+              onClick={markerHandler.bind(null, store)}
             >
-              <InfoWindowComponent feature={store} />
+              {selectedMarker && selectedMarker.id === store.id && (
+                <InfoWindowComponent feature={store} />
+              )}
             </Marker>
           ))}
           <Marker position={defaultCenter} />
